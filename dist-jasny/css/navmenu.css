@@ -11,15 +11,13 @@ body {
 
 .navbar {
   display: block;
-  text-align: center;
+  /*text-align: center;*/
 }
 .navbar-brand {
   display: inline-block;
   float: none;
 }
-.navbar-brand.secondary {
-  margin-left: 60px;
-}
+
 .navbar-toggle {
   position: absolute;
   float: left;
@@ -31,9 +29,9 @@ body {
 }
 
 @media (min-width: 1px) {
-  .navbar-toggle {
-    display: block !important;
-  }
+  /*.navbar-toggle {*/
+    /*display: block !important;*/
+  /*}*/
 }
 
 @media (min-width: 992px) {
@@ -51,12 +49,36 @@ body {
 
 /* mmenu overrides */
 @media all and (min-width: 650px) {
-    a[href="#menu"] {
-        display: none;
-    }
-    .content {
-        background: none;
-    }
+  /*a[href="#menu"] {*/
+  /*display: none;*/
+  /*}*/
+  .content {
+    background: none;
+  }
+  .navbar-toggle {
+    display: none;
+  }
+  .navbar-brand {
+    margin-left: 5px;
+  }
+}
+@media all and (max-width: 649px) {
+  /*a[href="#menu"] {*/
+  /*display: none;*/
+  /*}*/
+  .content {
+    background: none;
+  }
+  .navbar-toggle {
+    display: block;
+  }
+  .navbar-brand {
+    margin-left: 60px;
+  }
+}
+/*this keeps menu from flickering on load*/
+.before-move {
+  display:none;
 }
 /* jasny overrides */
 /*.navmenu-default, .navbar-default .navbar-offcanvas {*/
