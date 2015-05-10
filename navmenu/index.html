@@ -94,16 +94,17 @@
                         closeMenu();
                         return false;
                     }
-
             );
 
             $(".navbar-toggle").click(function(){
                 $("#menu").toggleClass("mm-current");
+                $("html").toggleClass("mm-opened").toggleClass("mm-opening");
             });
         });
         function closeMenu() {
             if ($("#menu").hasClass("mm-current")) {
                 $("#menu").removeClass("mm-current");
+                $("html").removeClass("mm-opened").removeClass("mm-opening");
             }
         }
 
