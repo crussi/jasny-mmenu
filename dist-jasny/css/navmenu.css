@@ -35,14 +35,14 @@ body {
 }
 
 @media (min-width: 992px) {
-  body {
-    padding: 0 0 0 30%;
-  }
+  /*body {*/
+    /*padding: 0 0 0 30%;*/
+  /*}*/
   .navmenu {
     padding-top: 0;
   }
   .navbar {
-    /*display: none !important; /* IE8 fix */*/
+    /*display: none !important; /* IE8 fix */
   }
 
 }
@@ -61,9 +61,6 @@ body {
   .navbar-brand {
     margin-left: 5px;
   }
-  /*.mm-menu.mm-widescreen {*/
-    /*z-index: 3;*/
-  /*}*/
 }
 @media all and (max-width: 649px) {
   /*a[href="#menu"] {*/

@@ -20,8 +20,8 @@ body {
     -ms-transform: none !important;
     -o-transform: none !important;
     /*transform: none !important;*/
-    width: 100% !important;
-    margin-left: 0 !important; }
+    width: 70% !important;
+    margin-left: 30% !important; }
 
 .mm-page {
     background: inherit;
