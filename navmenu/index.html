@@ -8,7 +8,7 @@
     <!-- mmenu start-->
     <link type="text/css" rel="stylesheet" href="../../dist-mmenu/css/jquery.mmenu.all.css" />
     <!--<link type="text/css" rel="stylesheet" href="../../dist-mmenu/css/extensions/jquery.mmenu.widescreen.css?" media="all and (min-width: 650px)" />-->
-    <link type="text/css" rel="stylesheet" href="../../dist-jasny/css/widescreen.css?" media="all and (min-width: 650px)" />
+    <link type="text/css" rel="stylesheet" href="../../dist-jasny/css/widescreen.css?" media="all and (min-width: 750px)" />
     <link type="text/css" rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css"/>
     <!-- mmenu end -->
 
@@ -66,9 +66,9 @@
             <li><a href="#/"><i class="fa fa-home"></i> Home</a></li>
             <li><a href="#/about"><i class="fa fa-user"></i> About us</a>
                 <ul>
-                    <li><a href="#"><i class="fa fa-user"></i> Team</a></li>
-                    <li><a href="#"><i class="fa fa-user"></i> Leadership</a></li>
-                    <li><a href="#"><i class="fa fa-user"></i> Contact Us</a></li>
+                    <li><a href="#/"><i class="fa fa-user"></i> Team</a></li>
+                    <li><a href="#/"><i class="fa fa-user"></i> Leadership</a></li>
+                    <li><a href="#/"><i class="fa fa-user"></i> Contact Us</a></li>
                 </ul>
             </li>
             <li><a href="#/contact"><i class="fa fa-envelope"></i> Contact</a></li>
@@ -86,25 +86,27 @@
     <script type="text/javascript">
         $(document).ready(function(){
             $( window ).resize(function() {
-                //if ($(window).width() >= 650) {
-                    if ($("#menu").hasClass("mm-current")) {
-                        $("#menu").removeClass("mm-current");
-                    }
-                //}
+                closeMenu();
             });
-            $("#menu").mmenu({extensions: ["widescreen"]});
-            $(".navbar-toggle").click(function(){
-                if ($("#menu").hasClass("mm-current")) {
-                    $("#menu").removeClass("mm-current");
-                } else {
-                    $("#menu").addClass("mm-current");
-                }
+            $("#menu").mmenu({extensions: ["widescreen"]}).on('click',
+                    'a[href^="#/"]',
+                    function() {
+                        closeMenu();
+                        return false;
+                    }
 
+            );
+
+            $(".navbar-toggle").click(function(){
+                $("#menu").toggleClass("mm-current");
             });
         });
-//        $(function() {
-//            $("#menu").mmenu({extensions: ["widescreen"]});
-//        });
+        function closeMenu() {
+            if ($("#menu").hasClass("mm-current")) {
+                $("#menu").removeClass("mm-current");
+            }
+        }
+
     </script>
   </body>
 </html>
