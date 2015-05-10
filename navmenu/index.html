@@ -8,6 +8,7 @@
     <!-- mmenu start-->
     <link type="text/css" rel="stylesheet" href="../../dist-mmenu/css/jquery.mmenu.all.css" />
     <link type="text/css" rel="stylesheet" href="../../dist-mmenu/css/extensions/jquery.mmenu.widescreen.css?" media="all and (min-width: 650px)" />
+    <link type="text/css" rel="stylesheet" href="../../dist-jasny/css/widescreen.css?" media="all and (min-width: 650px)" />
     <link type="text/css" rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css"/>
     <!-- mmenu end -->
 
@@ -19,6 +20,7 @@
 
     <!-- Custom styles for this template -->
     <link href="../../dist-jasny/css/navmenu.css" rel="stylesheet">
+
     <!-- Just for debugging purposes. Don't actually copy this line! -->
     <!--[if lt IE 9]><script src="../../docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
 
@@ -35,9 +37,10 @@
   <body>
     <nav id="navx" class="navbar navbar-default navbar-fixed-top">
       
-        <div class="navbar-header header">
-            <a href="#my-menu"></a>
-          <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target=".navmenu" visible-sm visible-xs>
+        <div class="navbar-header">
+            <!--<a href="#my-menu"></a>-->
+          <!--<button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target=".navmenu" visible-sm visible-xs>-->
+            <button type="button" class="navbar-toggle" data-target=".navmenu">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
@@ -54,7 +57,7 @@
       
     </nav>       
 
-    <div class="container">
+    <div class="container" style="background-color: lightgreen">
 
     </div>
 
@@ -91,10 +94,6 @@
             });
             $("#menu").mmenu({extensions: ["widescreen"]});
             $(".navbar-toggle").click(function(){
-                //console.log('hamburger ' + $("#menu").attr("class"));
-                //console.log($("#menu"));
-                //console.log($("#menu").trigger);
-                //$("#menu").trigger("open.mm");
                 if ($("#menu").hasClass("mm-current")) {
                     $("#menu").removeClass("mm-current");
                 } else {

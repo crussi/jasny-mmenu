@@ -61,6 +61,9 @@ body {
   .navbar-brand {
     margin-left: 5px;
   }
+  /*.mm-menu.mm-widescreen {*/
+    /*z-index: 3;*/
+  /*}*/
 }
 @media all and (max-width: 649px) {
   /*a[href="#menu"] {*/
@@ -75,11 +78,35 @@ body {
   .navbar-brand {
     margin-left: 60px;
   }
+  .mm-menu {
+    z-index: 1;
+  }
+}
+/*.mm-slideout {*/
+  /*-webkit-transform: none !important;*/
+  /*-moz-transform: none !important;*/
+  /*-ms-transform: none !important;*/
+  /*-o-transform: none !important;*/
+  /*transform: none !important;*/
+  /*width: 70% !important;*/
+  /*margin-left: 30% !important;*/
+/*}*/
+/*.mm-menu.mm-widescreen {*/
+  /*display: block;*/
+  /*width: 30% !important;*/
+  /*min-width: none !important;*/
+  /*max-width: none !important;*/
+  /*z-index: 0;*/
+/*}*/
+.mm-page {
+  min-height: 100vh;
 }
 /*this keeps menu from flickering on load*/
 .before-move {
   display:none;
 }
+
+
 /* jasny overrides */
 /*.navmenu-default, .navbar-default .navbar-offcanvas {*/
   /*background-color: transparent;*/
