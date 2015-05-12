@@ -76,7 +76,11 @@ body {
     margin-left: 60px;
   }
   .mm-menu {
-    z-index: 1;
+    z-index: 0;
+  }
+  .mm-menu.mm-offcanvas {
+    display: block;
+    position: fixed;
   }
   /*.mm-slideout {*/
     /*-webkit-transform: translate(80%, 0);*/
